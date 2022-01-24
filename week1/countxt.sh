@@ -1,7 +1,7 @@
 #!/bin/bash
-
-# Author: Brett Harris
-# Created: 20/1/2022
+# Counts the number of characters, words, sentences, and paragraphs
+# in a text file
+# Brett Harris 20/1/2022
 
 # Takes a text file as an argument and prints the number of
 # characters, words, sentences, and paragraphs in the file.
@@ -24,8 +24,8 @@
 if [ $# -ne 1 ]; then
     echo "Usage: ./countxt.sh <filename>"
     echo "where <filename> is the full path to the file you wish to check"
-else
-# continue with the script
+    exit -1 # exit with an error code
+fi
 
 #initialise variables for word count, sentence count, and paragraph count
 charcnt=0
@@ -69,9 +69,7 @@ echo "File \"$1\" contains:"
 echo "$charcnt characters"
 echo "$wordcnt words"
 echo "$sentcnt sentences"
-echo "$paracnt paragraphs"
-
-fi 
+echo "$paracnt paragraphs" 
 
 #exit cleanly
 exit 0
