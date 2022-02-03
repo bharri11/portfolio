@@ -12,18 +12,21 @@ if [ $? = 0 ]; then
 	echo "1. Create a folder"
 	echo "2. Copy a folder"
 	echo "3. Set a password"
+	echo "4. Quit"
 	read -n 1 choice #get a single character
 	echo
 
 	case "$choice" in
-		1) ./foldermaker.sh
-		   ;;
-		2) ./folderCopier.sh
-		   ;;
-		3) ./setPassword.sh
-		   ;;
-		*) echo "Invalid selection"
-		   ;;
+		1)  ./foldermaker.sh
+		    ;;
+		2)  ./folderCopier.sh
+		    ;;
+		3)  ./setPassword.sh
+		    ;;
+		4)  exit 0
+			;;
+		*)  echo "Invalid selection"
+		    ;;
 	esac
 fi
 
