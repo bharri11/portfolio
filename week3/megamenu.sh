@@ -85,13 +85,13 @@ do
 
 			case "$choice" in	# execute the respective script based on user selection
 				1)  echo "1. Create a folder:"
-					./foldermaker.sh
+					../week2/foldermaker.sh
 					;;
 				2)  echo "2. Copy a folder:"
-					./folderCopier.sh
+					../week2/folderCopier.sh
 					;;
 				3)  echo "3. Set a password:"
-					./setPassword.sh
+					../week2/setPassword.sh
 					;;
 				4)	echo "4. Calculator:"
 					./calc.sh
